@@ -18,8 +18,6 @@
     </article>
   </section>
 
-  
-
 </template>
 
 <!-- SCRIPT -->
