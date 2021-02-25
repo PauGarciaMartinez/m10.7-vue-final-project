@@ -20,6 +20,10 @@
   padding: 1rem;
 }
 
+.user-name {
+  font-size: 1.1rem;
+}
+
 .user-btn {
   display: flex;
   align-items: center;
@@ -39,12 +43,12 @@
   background-color: #2c3e50e1;
 }
 
-@media only screen and (max-width: 1350px) {
+@media only screen and (max-width: 1400px) {
   .users-wrapper {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1150px) {
   .users-wrapper {
     grid-template-columns: repeat(3, 1fr);
   }
