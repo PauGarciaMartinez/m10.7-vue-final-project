@@ -1,38 +1,30 @@
+<!-- TEMPLATE -->
 <template>
 
-  <header>
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
+  <nav class="nav">
+    <div class="logo-container">
+      <img class="logo" alt="Vue logo" src="./assets/logo.png">
     </div>
-  </header>
+    <div class="menu-container">
+      <router-link :to="{ name: 'Home' }">Home</router-link>
+      <router-link :to="{ name: 'Users' }">Users</router-link> 
+      <router-link :to="{ name: 'Pictures' }">Pictures</router-link> 
+    </div>
+    <div>
+      <input class="search-bar" type="text" placeholder="Search a user...">
+    </div>
+  </nav>
 
   <router-view/>
 
-  <footer>
+  <footer class="footer">
 
   </footer>
   
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<!-- SCRIPT -->
+<script type="text/javascript" src="./scripts/app.js"></script>
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+<!-- STYLE -->
+<style src="./styles/css/app.css"></style>

@@ -1,13 +1,14 @@
+<!-- TEMPLATE -->
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-  </div>
+
+  <header>
+    <h1>Home</h1>
+  </header>
+
 </template>
 
-<script>
-export default {
-  name: 'Home',
-  components: {
-  }
-}
-</script>
+<!-- SCRIPT -->
+<script type="text/javascript" src="./../scripts/home.js"></script>
+
+<!-- STYLE -->
+<style src="./../styles/css/home.css"></style>
