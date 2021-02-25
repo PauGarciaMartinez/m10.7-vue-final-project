@@ -18,7 +18,7 @@
   <router-view/>
 
   <footer class="footer">
-
+    
   </footer>
   
 </template>
