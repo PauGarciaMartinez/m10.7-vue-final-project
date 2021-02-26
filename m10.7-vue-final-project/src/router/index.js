@@ -1,7 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Users from '../views/Users.vue'
+import UserDetails from '../views/UserDetails.vue'
 import Pictures from '../views/Pictures.vue'
+import PictureDetails from '../views/PictureDetails.vue'
+
 
 const routes = [
   {
@@ -18,6 +21,18 @@ const routes = [
     path: '/pictures',
     name: 'Pictures',
     component: Pictures
+  },
+  {
+    path: '/users/:id',
+    name: 'UserDetails',
+    component: UserDetails,
+    props: true
+  },
+  {
+    path: '/pictures/:id',
+    name: 'PictureDetails',
+    component: PictureDetails,
+    props: true
   }
 ]
 

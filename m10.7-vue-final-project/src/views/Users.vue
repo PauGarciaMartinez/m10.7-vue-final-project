@@ -12,7 +12,7 @@
   <section class="users-wrapper">
     <article class="user-container" v-for="user in users" :key="user.id">
       <p class="user-name">{{ user.name }}</p>
-      <route-link>
+      <route-link :to="{ name: 'UserDetails' }">
         <button class="user-btn">More info</button>
       </route-link>
     </article>
