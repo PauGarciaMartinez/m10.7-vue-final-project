@@ -1,0 +1,19 @@
+.user-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 3rem;
+  background-color: #42b9832d;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 3px #2c3e503f;
+  padding: 1rem;
+}
+
+.user-info {
+  text-align: left;
+}
+
+/*# sourceMappingURL=user-details.css.map */

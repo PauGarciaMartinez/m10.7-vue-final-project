@@ -1,24 +1,13 @@
+import getUserDetails from './../composables/getUserDetails.js'
+
 export default {
   name: 'UserDetails',
   props: ['id'],
-  setup() {
-    const users = ref([])    
-    const error = ref(null)
+  setup(props) {
+    const { user, error, loadUserDetails} = getUserDetails(props.id) 
 
-    const getUsers = async () => {
-      try {
-        let usersData = await fetch('http://jsonplaceholder.typicode.com/users')
-        if (!usersData) {
-          throw Error('No users data available')
-        }
-        users.value = await usersData.json()
-      }
-      catch (err) {
-        error.value = err.message
-      }
-    }
-    getUsers()
+    loadUserDetails()
 
-    return { users, error }
+    return { user, error }
   }
 }

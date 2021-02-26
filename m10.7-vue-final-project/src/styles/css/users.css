@@ -43,6 +43,10 @@
   background-color: #2c3e50e1;
 }
 
+.router-link {
+  text-decoration: none;
+}
+
 @media only screen and (max-width: 1400px) {
   .users-wrapper {
     grid-template-columns: repeat(4, 1fr);
