@@ -11,7 +11,7 @@
     <p>{{ error }}</p>
   </section>
 
-  <section class="pictures-wrapper">
+  <section v-if="album" class="pictures-wrapper">
     <article class="picture-container" v-for="picture in album" :key="picture.id">
       <p class="picture-name">{{ picture.id }}</p>
     </article>
