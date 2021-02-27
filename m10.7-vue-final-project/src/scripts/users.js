@@ -1,4 +1,3 @@
-import { ref } from 'vue'
 import getUsers from './../composables/getUsers.js'
 
 export default {
@@ -13,6 +12,9 @@ export default {
   methods: {
     goBack() {
       this.$router.go(-1)
+    },
+    caps(name) {
+      return name.toUpperCase()
     }
   }
 }

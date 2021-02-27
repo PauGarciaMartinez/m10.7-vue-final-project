@@ -14,8 +14,9 @@
       <input class="search-bar" type="text" placeholder="Search a user...">
     </div>
   </nav>
-
-  <router-view/>
+  
+  <router-view>
+  </router-view>
 
   <footer class="footer">
     

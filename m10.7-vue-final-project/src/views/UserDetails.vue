@@ -13,7 +13,7 @@
 
   <section v-if="user">
     <article class="user-card">
-      <h3 class="user-title">{{ user.name }}</h3>
+      <h3 class="user-title">{{ caps(user.name) }}</h3>
       <div class="user-info">
         <p><strong>Email:</strong> {{ user.email }}</p>
         <p><strong>Phone:</strong> {{ user.phone }}</p>

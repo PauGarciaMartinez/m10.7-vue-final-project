@@ -12,7 +12,7 @@
   </section>
 
   <section class="pictures-wrapper">
-    <article class="picture-container" v-for="picture in album" :key="picture.id">
+    <article class="picture-container">
       <p class="picture-name">{{ album }}</p>
     </article>
   </section>

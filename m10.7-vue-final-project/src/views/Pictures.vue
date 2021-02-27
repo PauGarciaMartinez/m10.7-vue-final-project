@@ -11,7 +11,7 @@
     <p>{{ error }}</p>
   </section>
 
-  <section class="albums-wrapper">
+  <section class="albums-wrapper" v-if="albums">
     <article class="album-container" v-for="album in albums" :key="album.albumId">
       <p class="album-name">Album {{ album.albumId }}</p>
       <router-link :to="{ name: 'PictureDetails', params: { id: album.albumId }}" class="router-link">
