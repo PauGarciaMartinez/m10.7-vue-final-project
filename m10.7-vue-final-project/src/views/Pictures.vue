@@ -12,9 +12,9 @@
   <section class="albums-wrapper">
     <article class="album-container" v-for="album in albums" :key="album.albumId">
       <p class="album-name">{{ album.title }}</p>
-      <route-link>
+      <router-link :to="{ name: 'PictureDetails', params: { id: album.id }}">
         <button class="album-btn">See pictures</button>
-      </route-link>
+      </router-link>
     </article>
   </section>
 </template>

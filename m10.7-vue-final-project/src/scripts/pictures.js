@@ -1,24 +1,12 @@
 import { ref } from 'vue'
+import getAlbums from './../composables/getAlbums.js'
 
 export default {
   name: 'Pictures', 
   setup() {
-    const albums = ref([])    
-    const error = ref(null)
+    const { albums, error, loadAlbums} = getAlbums()
 
-    const getAlbums = async () => {
-      try {
-        let albumsData = await fetch('http://jsonplaceholder.typicode.com/photos')
-        if (!albumsData) {
-          throw Error('No users data available')
-        }
-        albums.value = await albumsData.json()
-      }
-      catch (err) {
-        error.value = err.message
-      }
-    }
-    getAlbums()
+    loadAlbums()
 
     return { albums, error }
   }

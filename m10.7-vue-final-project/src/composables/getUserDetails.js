@@ -1,7 +1,7 @@
 import { ref } from 'vue'
 
 const getUserDetails = (id) => {
-  const user = ref(null)    
+  const user = ref(null)
   const error = ref(null)
 
   const loadUserDetails = async () => {

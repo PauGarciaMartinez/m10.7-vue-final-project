@@ -1,6 +1,6 @@
 <!-- TEMPLATE -->
 <template>
-  
+  <h1>Picture Details</h1>
 </template>
 
 <!-- SCRIPT -->
