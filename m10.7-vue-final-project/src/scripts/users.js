@@ -9,5 +9,10 @@ export default {
     loadUsers()
 
     return { users, error }
+  },
+  methods: {
+    goBack() {
+      this.$router.go(-1)
+    }
   }
 }

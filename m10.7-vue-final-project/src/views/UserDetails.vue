@@ -1,6 +1,8 @@
 <!-- TEMPLATE -->
 <template>
   
+  <button @click="goBack()" class="back-btn">Go back</button>
+
   <header>
     <h1>User Details</h1>
   </header>

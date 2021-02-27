@@ -9,5 +9,10 @@ export default {
     loadUserDetails()
 
     return { user, error }
+  },
+  methods: {
+    goBack() {
+      this.$router.go(-1)
+    }
   }
 }

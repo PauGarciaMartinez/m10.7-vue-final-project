@@ -9,5 +9,10 @@ export default {
     loadAlbums()
 
     return { albums, error }
+  },
+  methods: {
+    goBack() {
+      this.$router.go(-1)
+    }
   }
 }

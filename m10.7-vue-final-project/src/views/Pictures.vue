@@ -1,6 +1,8 @@
 <!-- TEMPLATE -->
 <template>
   
+  <button @click="goBack" class="back-btn">Go back</button>
+
   <header>
     <h1>Albums</h1>
   </header>
@@ -12,11 +14,12 @@
   <section class="albums-wrapper">
     <article class="album-container" v-for="album in albums" :key="album.albumId">
       <p class="album-name">{{ album.title }}</p>
-      <router-link :to="{ name: 'PictureDetails', params: { id: album.id }}">
+      <router-link :to="{ name: 'PictureDetails', params: { id: album.id }}" class="router-link">
         <button class="album-btn">See pictures</button>
       </router-link>
     </article>
   </section>
+
 </template>
 
 <!-- SCRIPT -->
