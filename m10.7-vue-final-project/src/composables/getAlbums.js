@@ -11,6 +11,9 @@ const getAlbums = () => {
         throw Error('No album data available')
       }
       albums.value = await albumsData.json()
+      // Filtering albums to display unique ones
+      const filteredAlbums = new Set()
+      albums.value = albums.value.filter(album => !filteredAlbums.has(album.albumId) && filteredAlbums.add(album.albumId))
     }
     catch (err) {
       error.value = err.message

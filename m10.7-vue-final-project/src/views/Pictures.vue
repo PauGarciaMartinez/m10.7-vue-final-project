@@ -13,8 +13,8 @@
 
   <section class="albums-wrapper">
     <article class="album-container" v-for="album in albums" :key="album.albumId">
-      <p class="album-name">{{ album.title }}</p>
-      <router-link :to="{ name: 'PictureDetails', params: { id: album.id }}" class="router-link">
+      <p class="album-name">Album {{ album.albumId }}</p>
+      <router-link :to="{ name: 'PictureDetails', params: { id: album.albumId }}" class="router-link">
         <button class="album-btn">See pictures</button>
       </router-link>
     </article>
