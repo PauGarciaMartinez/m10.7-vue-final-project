@@ -16,7 +16,7 @@
     </article>
 
     <article class="consulted-container">
-      <h3>Pictures consulted</h3>
+      <h3>Albums consulted</h3>
       <div class="data-container">
         <p>Lorem, ipsum dolor sit amet</p>
         <p><strong>6</strong></p>

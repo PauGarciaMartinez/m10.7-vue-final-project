@@ -10,17 +10,20 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    props: true
   },
   {
     path: '/users',
     name: 'Users',
-    component: Users
+    component: Users,
+    props: true
   },
   {
     path: '/pictures',
     name: 'Pictures',
-    component: Pictures
+    component: Pictures,
+    props: true
   },
   {
     path: '/users/:id',

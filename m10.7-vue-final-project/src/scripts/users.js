@@ -1,8 +1,11 @@
+import { watch, watchEffect } from 'vue'
+import { ref } from 'vue'
 import getUsers from './../composables/getUsers.js'
 
 export default {
   name: 'Users', 
-  setup() {
+  props: ['inputSearch'],
+  setup(props) {
     const { users, error, loadUsers} = getUsers()
 
     loadUsers()
@@ -15,6 +18,10 @@ export default {
     },
     caps(name) {
       return name.toUpperCase()
-    }
+    },
+    addCounter(username) {
+      this.$emit('addCounter', username)
+    },
+
   }
 }

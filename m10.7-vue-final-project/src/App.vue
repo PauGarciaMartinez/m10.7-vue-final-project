@@ -11,12 +11,17 @@
       <router-link :to="{ name: 'Pictures' }">Pictures</router-link> 
     </div>
     <div>
-      <input class="search-bar" type="text" placeholder="Search a user...">
+      <router-link :to="{ name: 'Users', params: { inputSearch: input }}">
+        <input 
+          class="search-bar" 
+          type="text" 
+          placeholder="Search a user..."
+          v-model="input">
+      </router-link> 
     </div>
   </nav>
   
-  <router-view>
-  </router-view>
+  <router-view/>
 
   <footer class="footer">
     
