@@ -12,7 +12,7 @@ const getAlbum = (id) => {
       }
       album.value = await albumData.json()
       // To show only the photos from the same album
-      
+      album.value = album.value.filter((album) => album.albumId == id)
     }
     catch (err) {
       error.value = err.message

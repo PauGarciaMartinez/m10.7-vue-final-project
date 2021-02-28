@@ -1,3 +1,12 @@
+// PICTURES WRAPPER
+.pictures-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
 // GO BACK BTN
 .back-btn {
   height: auto;

@@ -12,8 +12,8 @@
   </section>
 
   <section class="pictures-wrapper">
-    <article class="picture-container">
-      <p class="picture-name">{{ album }}</p>
+    <article v-for="picture in album" :key="picture.id">
+      <img :src="picture.url" alt="Another dull photo">
     </article>
   </section>
 
