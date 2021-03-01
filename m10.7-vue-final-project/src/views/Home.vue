@@ -18,7 +18,7 @@
     <article class="consulted-container">
       <h3>Albums consulted</h3>
       <div class="data-container" v-for="album in albumsConsulted" :key="album">
-        <p>{{ album }}</p>
+        <p>{{ `Album ${album}` }}</p>
         <p><strong>6</strong></p>
       </div>
     </article>
