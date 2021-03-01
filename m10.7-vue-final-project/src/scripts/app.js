@@ -8,18 +8,20 @@ export default {
     }
   },
   methods: {
-    userUp(username) {
-      let check = this.usersConsulted.findIndex(item => item.username === username)
-      if (check === -1) {
-        username.count = 1
-        this.usersConsulted.push(username)
+    userUp(user) {
+      let consulted = this.usersConsulted.indexOf(user.name)
+      if (consulted === -1) {
+        user.clicks = 1
+        this.usersConsulted.push(user.name, user.clicks)
       } else {
-        let userClicked = this.usersConsulted.find(item => item.id === username.id)
-        userClicked.count++
+        user.clicks++
       }
     },
     albumUp(album) {
       this.albumsConsulted.push(album)
+    },
+    conole() {
+      console.log(usersConsulted)
     }
   }
 }

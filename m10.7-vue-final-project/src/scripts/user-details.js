@@ -2,7 +2,7 @@ import getUserDetails from './../composables/getUserDetails.js'
 
 export default {
   name: 'UserDetails',
-  emits: ['addUserConsulted'],
+  emits: ['addUserConsulted', 'addAlbumConsulted'],
   props: ['id'],
   setup(props) {
     const { user, error, loadUserDetails} = getUserDetails(props.id) 

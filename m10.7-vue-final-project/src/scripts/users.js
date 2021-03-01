@@ -5,7 +5,7 @@ import getUsers from './../composables/getUsers.js'
 export default {
   name: 'Users', 
   props: ['inputSearch'],
-  emits: ['addUserConsulted'],
+  emits: ['addUserConsulted', 'addAlbumConsulted'],
   setup() {
     const { users, error, loadUsers} = getUsers()
 
@@ -20,9 +20,8 @@ export default {
     caps(name) {
       return name.toUpperCase()
     },
-    addUserConsulted(username) {
-      this.$emit('add-user-consulted', username)
-    },
-
+    addUserConsulted(user) {
+      this.$emit('add-user-consulted', user)
+    }
   }
 }
