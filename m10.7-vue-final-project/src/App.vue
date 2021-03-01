@@ -6,7 +6,7 @@
       <img class="logo" alt="Vue logo" src="./assets/logo.png">
     </div>
     <div class="menu-container">
-      <router-link :to="{ name: 'Home' }">Home</router-link>
+      <router-link :to="{ name: 'Home', params: { usersConsulted: usersConsulted, albumsConsulted: albumsConsulted }}">Home</router-link>
       <router-link :to="{ name: 'Users' }">Users</router-link> 
       <router-link :to="{ name: 'Pictures' }">Pictures</router-link> 
     </div>
@@ -21,10 +21,10 @@
     </div>
   </nav>
   
-  <router-view/>
+  <router-view @add-user-consulted="userUp" @add-album-consulted="albumUp"/>
 
   <footer class="footer">
-    
+    <p></p>
   </footer>
   
 </template>

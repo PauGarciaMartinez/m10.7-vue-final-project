@@ -1,5 +1,5 @@
 export default {
   name: 'Home',
-  components: {
-  }
+  emits: ['addUserConsulted', 'addAlbumConsulted'],
+  props: ['usersConsulted', 'albumsConsulted']
 }

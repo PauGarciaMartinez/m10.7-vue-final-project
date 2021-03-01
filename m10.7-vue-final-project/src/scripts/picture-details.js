@@ -3,6 +3,7 @@ import getAlbumDetails from './../composables/getAlbumDetails.js'
 
 export default {
   name: 'Pictures',
+  emits: ['addUserConsulted'],
   props: ['id'],
   setup(props) {
     const { album, error, loadAlbum} = getAlbumDetails(props.id)
