@@ -55,7 +55,13 @@
 
 // FOOTER
 .footer {
-  background-color: #2c3e5010;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 3rem;
+  padding: 1rem;
+  background-color: #f5f6f8;
 }
 
 // ROUTE TRANSITION

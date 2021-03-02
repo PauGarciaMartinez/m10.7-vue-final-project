@@ -24,7 +24,7 @@
   <router-view @add-user-consulted="userUp" @add-album-consulted="albumUp"/>
 
   <footer class="footer">
-    <p></p>
+    <p>Created by Pau Garcia</p>
   </footer>
   
 </template>
