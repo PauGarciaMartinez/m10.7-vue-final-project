@@ -6,7 +6,7 @@
       <img class="logo" alt="Vue logo" src="./assets/logo.png">
     </div>
     <div class="menu-container">
-      <router-link :to="{ name: 'Home', params: { usersConsulted: usersConsulted, albumsConsulted: albumsConsulted }}">Home</router-link>
+      <router-link :to="{ name: 'Home', params: { usersConsulted: JSON.stringify(usersConsulted), albumsConsulted: JSON.stringify(albumsConsulted) }}">Home</router-link>
       <router-link :to="{ name: 'Users' }">Users</router-link> 
       <router-link :to="{ name: 'Pictures' }">Pictures</router-link> 
     </div>

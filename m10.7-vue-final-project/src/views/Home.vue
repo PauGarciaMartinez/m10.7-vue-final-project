@@ -9,17 +9,17 @@
 
     <article class="consulted-container">
       <h3>Users consulted</h3>
-      <div class="data-container" v-for="user in usersConsulted" :key="user">
-        <p>{{ user }}</p>
-        <p><strong>{{ user }}</strong></p>
+      <div class="data-container" v-for="user in usersVisited" :key="user">
+        <p>{{ user.name }}</p>
+        <p><strong>{{ user.clicks }}</strong></p>
       </div>
     </article>
 
     <article class="consulted-container">
       <h3>Albums consulted</h3>
-      <div class="data-container" v-for="album in albumsConsulted" :key="album">
-        <p>{{ `Album ${album}` }}</p>
-        <p><strong>6</strong></p>
+      <div class="data-container" v-for="album in albumsVisited" :key="album">
+        <p>{{ `Album ${album.albumId}` }}</p>
+        <p><strong>{{ album.clicks }}</strong></p>
       </div>
     </article>
 

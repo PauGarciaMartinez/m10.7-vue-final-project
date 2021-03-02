@@ -13,14 +13,20 @@ export default {
       if (consulted === -1) {
         user.clicks = 1
         this.usersConsulted.push(user)
-        console.log(this.usersConsulted)
       } else {
         let userClicked = this.usersConsulted.find(item => item.name === user.name)
         userClicked.clicks++
       }
     },
     albumUp(album) {
-      this.albumsConsulted.push(album)
+      let consulted = this.albumsConsulted.findIndex(item => item.albumId === album.albumId)
+      if (consulted === -1) {
+        album.clicks = 1
+        this.albumsConsulted.push(album)
+      } else {
+        let albumClicked = this.albumsConsulted.find(item => item.albumId === album.albumId)
+        albumClicked.clicks++
+      }
     }
   }
 }

@@ -1,7 +1,6 @@
 .consulted-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 1fr;
   margin: auto 5rem;
   gap: 3rem;
 }

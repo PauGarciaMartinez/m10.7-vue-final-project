@@ -4,7 +4,17 @@ export default {
   props: ['usersConsulted', 'albumsConsulted'],
   data() {
     return {
-      usersVisited: [] 
+      usersVisited: [],
+      albumsVisited: []
+    }
+  },
+  mounted() {
+    if (this.usersConsulted) {
+      this.usersVisited = JSON.parse(this.usersConsulted)
+    }
+
+    if (this.albumsConsulted) {
+      this.albumsVisited = JSON.parse(this.albumsConsulted)
     }
   }
 }
