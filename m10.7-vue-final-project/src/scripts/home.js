@@ -1,5 +1,10 @@
 export default {
   name: 'Home',
   emits: ['addUserConsulted', 'addAlbumConsulted'],
-  props: ['usersConsulted', 'albumsConsulted']
+  props: ['usersConsulted', 'albumsConsulted'],
+  data() {
+    return {
+      usersVisited: [] 
+    }
+  }
 }
