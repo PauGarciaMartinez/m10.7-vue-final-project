@@ -7,7 +7,7 @@
     </div>
     <div class="menu-container">
       <router-link :to="{ name: 'Home', params: { usersConsulted: JSON.stringify(usersConsulted), albumsConsulted: JSON.stringify(albumsConsulted) }}">Home</router-link>
-      <router-link :to="{ name: 'Users', params: { inputSearch: input }}">Users</router-link> 
+      <router-link :to="{ name: 'Users' }">Users</router-link> 
       <router-link :to="{ name: 'Pictures' }">Pictures</router-link> 
     </div>
     <div class="search-container">
@@ -16,8 +16,8 @@
         type="text" 
         placeholder="Search a user..."
         v-model="input">
-      <router-link :to="{ name: 'Users', params: { inputSearch: input }}">
-        <button class="user-btn">Search</button>
+      <router-link class="router-link" :to="{ name: 'Users', params: { inputSearch: input }}">
+        <button class="search-btn">Search</button>
       </router-link> 
     </div>
   </nav>

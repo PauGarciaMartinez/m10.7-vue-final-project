@@ -18,6 +18,9 @@
         <button class="user-btn" @click="addUserConsulted(user)">More info</button>
       </router-link>
     </article>
+    <article v-if="!matchingUsers.length">
+      <p>Empty</p>
+    </article>
   </section>
 
 </template>
