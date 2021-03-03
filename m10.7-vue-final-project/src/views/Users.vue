@@ -12,7 +12,7 @@
   </section>
 
   <section class="users-wrapper">
-    <article class="user-container" v-for="user in users" :key="user.id">
+    <article class="user-container" v-for="user in matchingUsers" :key="user.id">
       <p class="user-name">{{ caps(user.name) }}</p>
       <router-link :to="{ name: 'UserDetails', params: { id: user.id }}" class="router-link">
         <button class="user-btn" @click="addUserConsulted(user)">More info</button>
