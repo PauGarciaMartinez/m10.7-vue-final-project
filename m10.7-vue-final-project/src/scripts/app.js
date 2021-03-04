@@ -1,3 +1,5 @@
+import Autocomplete from './../components/Autocomplete.vue'
+
 export default {
   name: 'App',
   data() {
@@ -28,5 +30,6 @@ export default {
         albumClicked.clicks++
       }
     }
-  }
+  },
+  components: { Autocomplete }
 }

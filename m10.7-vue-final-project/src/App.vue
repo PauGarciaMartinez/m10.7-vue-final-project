@@ -11,11 +11,14 @@
       <router-link :to="{ name: 'Pictures' }">Pictures</router-link> 
     </div>
     <div class="search-container">
-      <input 
-        class="search-bar" 
-        type="text" 
-        placeholder="Search a user..."
-        v-model="input">
+      <div class="list-container">
+        <input 
+          class="search-bar" 
+          type="text" 
+          placeholder="Search a user..."
+          v-model="input">
+        <Autocomplete :inputSearch="input"/>
+      </div>
       <router-link class="router-link" :to="{ name: 'Users', params: { inputSearch: input }}">
         <button class="search-btn">Search</button>
       </router-link> 

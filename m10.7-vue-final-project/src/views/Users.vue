@@ -13,24 +13,11 @@
 
   <section class="users-wrapper">
     
-    <article v-if="matchingUsers.length > 1" class="user-container" v-for="user in matchingUsers" :key="user.id">
+    <article class="user-container" v-for="user in matchingUsers" :key="user.id">
       <p class="user-name">{{ caps(user.name) }}</p>
       <router-link :to="{ name: 'UserDetails', params: { id: user.id }}" class="router-link">
         <button class="user-btn" @click="addUserConsulted(user)">More info</button>
       </router-link>
-    </article>
-
-    <article v-if="matchingUsers.length === 1" class="user-container" v-for="user in matchingUsers" :key="user.id">
-      <h3 class="user-title">{{ caps(user.name) }}</h3>
-      <div class="user-info">
-        <p><strong>Email:</strong> {{ user.email }}</p>
-        <p><strong>Phone:</strong> {{ user.phone }}</p>
-        <p><strong>Web:</strong> {{ user.website }}</p>
-        <p><strong>City:</strong> {{ user.address.city }}</p>
-        <p><strong>Street:</strong> {{ user.address.street }}</p>
-        <p><strong>Suite:</strong> {{ user.address.suite }}</p>
-        <p><strong>Zipcode:</strong> {{ user.address.zipcode }}</p>
-      </div>
     </article>
     
     <transition name="empty">
