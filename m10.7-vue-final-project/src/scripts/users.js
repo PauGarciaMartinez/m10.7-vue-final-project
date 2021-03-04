@@ -7,10 +7,10 @@ export default {
   props: ['inputSearch'],
   emits: ['addUserConsulted', 'addAlbumConsulted'],
   setup(props) {
-    const { users, error, loadUsers} = getUsers()
+    const { users, error, empty, loadUsers} = getUsers()
 
     loadUsers()
-
+    
     const matchingUsers = computed(() => {
       if (props.inputSearch) {
         return users.value.filter(user => user.name.toLowerCase().includes(props.inputSearch.toLowerCase()))
@@ -18,8 +18,8 @@ export default {
         return users.value
       }
     })
-
-    return { users, error, matchingUsers }
+    
+    return { users, error, empty, matchingUsers }
   },
   methods: {
     goBack() {

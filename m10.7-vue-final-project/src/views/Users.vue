@@ -34,7 +34,7 @@
     </article>
     
     <transition name="empty">
-      <article v-if="!matchingUsers.length" class="empty-container">
+      <article v-if="!matchingUsers.length && empty" class="empty-container">
         <p>No users matching</p>
       </article>
     </transition>
