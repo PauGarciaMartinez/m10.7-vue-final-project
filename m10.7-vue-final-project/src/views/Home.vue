@@ -1,33 +1,37 @@
 <!-- TEMPLATE -->
 <template>
 
-  <header>
-    <h1>Home</h1>
-  </header>
+  <div>
 
-  <section class="consulted-wrapper">
+    <header>
+      <h1>Home</h1>
+    </header>
 
-    <article class="consulted-container">
-      <h3>Users consulted</h3>
-      <div class="data-container" v-for="user in usersVisited" :key="user">
-        <div class="name-container">
-          <p>{{ user.name }}</p>
+    <section class="consulted-wrapper">
+
+      <article class="consulted-container">
+        <h3>Users consulted</h3>
+        <div class="data-container" v-for="user in usersVisited" :key="user">
+          <div class="name-container">
+            <p>{{ user.name }}</p>
+          </div>
+          <p><strong>{{ user.clicks }}</strong></p>
         </div>
-        <p><strong>{{ user.clicks }}</strong></p>
-      </div>
-    </article>
+      </article>
 
-    <article class="consulted-container">
-      <h3>Albums consulted</h3>
-      <div class="data-container" v-for="album in albumsVisited" :key="album">
-        <div class="name-container">
-          <p>{{ `Album ${album.albumId}` }}</p>
+      <article class="consulted-container">
+        <h3>Albums consulted</h3>
+        <div class="data-container" v-for="album in albumsVisited" :key="album">
+          <div class="name-container">
+            <p>{{ `Album ${album.albumId}` }}</p>
+          </div>
+          <p><strong>{{ album.clicks }}</strong></p>
         </div>
-        <p><strong>{{ album.clicks }}</strong></p>
-      </div>
-    </article>
+      </article>
 
-  </section>
+    </section>
+    
+  </div>
 
 </template>
 
