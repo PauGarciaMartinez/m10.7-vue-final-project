@@ -2,9 +2,11 @@ import Autocomplete from './../components/Autocomplete.vue'
 
 export default {
   name: 'App',
+  emits: ['setInput'],
   data() {
     return {
       input: "",
+      list: false,
       usersConsulted: [],
       albumsConsulted: []
     }
@@ -29,6 +31,10 @@ export default {
         let albumClicked = this.albumsConsulted.find(item => item.albumId === album.albumId)
         albumClicked.clicks++
       }
+    },
+    updateInput(username) {
+      this.input = username
+      this.list = false
     }
   },
   components: { Autocomplete }

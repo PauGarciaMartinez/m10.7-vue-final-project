@@ -3,7 +3,7 @@ import { computed } from 'vue'
 
 export default {
   name: 'Autocomplete',
-  props: ['inputSearch'],
+  props: ['inputSearch', 'resultsList'],
   setup(props) {
     const { users, error, loadUsers} = getUsers()
 
@@ -16,5 +16,10 @@ export default {
     })
     
     return { users, error, matchingUsers }
+  },
+  methods: {
+    setInput(username) {
+      this.$emit('set-input', username)
+    }
   }
 }

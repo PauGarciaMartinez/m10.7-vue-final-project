@@ -1,7 +1,7 @@
 <!-- TEMPLATE -->
 <template>
-  <div class="search-list">
-    <div class="user-list" v-for="user in matchingUsers">
+  <div class="search-list" v-if="resultsList">
+    <div class="user-list" v-for="user in matchingUsers" :key="user.id" @click="setInput(user.name)">
       <p>{{ user.name }}</p>
     </div>
   </div>
