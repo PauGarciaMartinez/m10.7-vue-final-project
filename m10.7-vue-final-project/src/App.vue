@@ -27,11 +27,7 @@
     </div>
   </nav>
     
-  <router-view v-slot="{ Component }" @add-user-consulted="userUp" @add-album-consulted="albumUp">
-    <transition name="route" mode="out-in">
-      <component :is="Component"></component>
-    </transition>
-  </router-view>
+  <router-view @add-user-consulted="userUp" @add-album-consulted="albumUp"/>
 
   <footer class="footer">
     <p>Created by Pau Garcia</p>
