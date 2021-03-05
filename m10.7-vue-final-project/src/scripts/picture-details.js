@@ -1,4 +1,3 @@
-import { ref } from 'vue'
 import getAlbumDetails from './../composables/getAlbumDetails.js'
 
 export default {
