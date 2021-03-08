@@ -20,6 +20,9 @@ export default {
   methods: {
     setInput(username) {
       this.$emit('set-input', username)
+    },
+    addSingleUser(user) {
+      this.$emit('add-single-user', user)
     }
   }
 }

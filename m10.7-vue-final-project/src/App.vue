@@ -19,7 +19,7 @@
           placeholder="Search a user..."
           v-model="input"
           @focus="list = true">
-        <Autocomplete :inputSearch="input" @setInput="updateInput" :resultsList="list"/>
+        <Autocomplete :inputSearch="input" @setInput="updateInput" :resultsList="list" @add-single-user="userUp"/>
       </div>
       <router-link class="router-link" :to="{ name: 'Users', params: { inputSearch: input }}">
         <button class="search-btn">Search</button>
