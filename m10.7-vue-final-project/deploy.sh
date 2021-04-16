@@ -10,6 +10,6 @@ cd dist
 git init
 git add -A
 git commit -m 'deploy'
-git push -f git@github.com:paugarciamartinez/m10.7-vue-final-project.git master:gh-pages
+git push -f git@github.com:paugarciamartinez/m10.7-vue-final-project.git main:gh-pages
 cd -
 chmod +x deploy.sh
